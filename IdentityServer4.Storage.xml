@@ -1,0 +1,1519 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>IdentityServer4.Storage</name>
+    </assembly>
+    <members>
+        <member name="T:IdentityServer4.IdentityServerUser">
+            <summary>
+            Model properties of an IdentityServer user
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.IdentityServerUser.SubjectId">
+            <summary>
+            Subject ID (mandatory)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.IdentityServerUser.DisplayName">
+            <summary>
+            Display name (optional)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.IdentityServerUser.IdentityProvider">
+            <summary>
+            Identity provider (optional)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.IdentityServerUser.AuthenticationMethods">
+            <summary>
+            Authentication methods
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.IdentityServerUser.AuthenticationTime">
+            <summary>
+            Authentication time
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.IdentityServerUser.AdditionalClaims">
+            <summary>
+            Additional claims
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.IdentityServerUser.#ctor(System.String)">
+            <summary>
+            Initializes a user identity
+            </summary>
+            <param name="subjectId">The subject ID</param>
+        </member>
+        <member name="M:IdentityServer4.IdentityServerUser.CreatePrincipal">
+            <summary>
+            Creates an IdentityServer claims principal
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="T:IdentityServer4.Models.ApiResource">
+            <summary>
+            Models a web API resource.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.ApiResource.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.ApiResource"/> class.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.ApiResource.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.ApiResource"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.ApiResource.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.ApiResource"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.ApiResource.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.ApiResource"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="claimTypes">The claim types.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.ApiResource.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.ApiResource"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="claimTypes">The claim types.</param>
+            <exception cref="T:System.ArgumentNullException">name</exception>
+        </member>
+        <member name="P:IdentityServer4.Models.ApiResource.ApiSecrets">
+            <summary>
+            The API secret is used for the introspection endpoint. The API can authenticate with introspection using the API name and secret.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.ApiResource.Scopes">
+            <summary>
+            An API must have at least one scope. Each scope can have different settings.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.AuthorizationCode">
+            <summary>
+            Modles an authorization code.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.Lifetime">
+            <summary>
+            Gets or sets the life time in seconds.
+            </summary>
+            <value>
+            The life time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.ClientId">
+            <summary>
+            Gets or sets the ID of the client.
+            </summary>
+            <value>
+            The ID of the client.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.Subject">
+            <summary>
+            Gets or sets the subject.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.IsOpenId">
+            <summary>
+            Gets or sets a value indicating whether this code is an OpenID Connect code.
+            </summary>
+            <value>
+            <c>true</c> if this instance is open identifier; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.RequestedScopes">
+            <summary>
+            Gets or sets the requested scopes.
+            </summary>
+            <value>
+            The requested scopes.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.RedirectUri">
+            <summary>
+            Gets or sets the redirect URI.
+            </summary>
+            <value>
+            The redirect URI.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.Nonce">
+            <summary>
+            Gets or sets the nonce.
+            </summary>
+            <value>
+            The nonce.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.StateHash">
+            <summary>
+            Gets or sets the hashed state (to output s_hash claim).
+            </summary>
+            <value>
+            The hashed state.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.WasConsentShown">
+            <summary>
+            Gets or sets a value indicating whether consent was shown.
+            </summary>
+            <value>
+              <c>true</c> if consent was shown; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.SessionId">
+            <summary>
+            Gets or sets the session identifier.
+            </summary>
+            <value>
+            The session identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.CodeChallenge">
+            <summary>
+            Gets or sets the code challenge.
+            </summary>
+            <value>
+            The code challenge.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.CodeChallengeMethod">
+            <summary>
+            Gets or sets the code challenge method.
+            </summary>
+            <value>
+            The code challenge method
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.AuthorizationCode.Properties">
+            <summary>
+            Gets or sets properties
+            </summary>
+            <value>
+            The properties
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Models.Client">
+            <summary>
+            Models an OpenID Connect or OAuth2 client
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.Enabled">
+            <summary>
+            Specifies if client is enabled (defaults to <c>true</c>)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ClientId">
+            <summary>
+            Unique ID of the client
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ProtocolType">
+            <summary>
+            Gets or sets the protocol type.
+            </summary>
+            <value>
+            The protocol type.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ClientSecrets">
+            <summary>
+            Client secrets - only relevant for flows that require a secret
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.RequireClientSecret">
+            <summary>
+            If set to false, no client secret is needed to request tokens at the token endpoint (defaults to <c>true</c>)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ClientName">
+            <summary>
+            Client display name (used for logging and consent screen)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.Description">
+            <summary>
+            Description of the client.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ClientUri">
+            <summary>
+            URI to further information about client (used on consent screen)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.LogoUri">
+            <summary>
+            URI to client logo (used on consent screen)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.RequireConsent">
+            <summary>
+            Specifies whether a consent screen is required (defaults to <c>true</c>)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowRememberConsent">
+            <summary>
+            Specifies whether user can choose to store consent decisions (defaults to <c>true</c>)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowedGrantTypes">
+            <summary>
+            Specifies the allowed grant types (legal combinations of AuthorizationCode, Implicit, Hybrid, ResourceOwner, ClientCredentials).
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.RequirePkce">
+            <summary>
+            Specifies whether a proof key is required for authorization code based token requests (defaults to <c>false</c>).
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowPlainTextPkce">
+            <summary>
+            Specifies whether a proof key can be sent using plain method (not recommended and defaults to <c>false</c>.)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowAccessTokensViaBrowser">
+            <summary>
+            Controls whether access tokens are transmitted via the browser for this client (defaults to <c>false</c>).
+            This can prevent accidental leakage of access tokens when multiple response types are allowed.
+            </summary>
+            <value>
+            <c>true</c> if access tokens can be transmitted via the browser; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.RedirectUris">
+            <summary>
+            Specifies allowed URIs to return tokens or authorization codes to
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.PostLogoutRedirectUris">
+            <summary>
+            Specifies allowed URIs to redirect to after logout
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.FrontChannelLogoutUri">
+            <summary>
+            Specifies logout URI at client for HTTP front-channel based logout.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.FrontChannelLogoutSessionRequired">
+            <summary>
+            Specifies is the user's session id should be sent to the FrontChannelLogoutUri. Defaults to <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.BackChannelLogoutUri">
+            <summary>
+            Specifies logout URI at client for HTTP back-channel based logout.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.BackChannelLogoutSessionRequired">
+            <summary>
+            Specifies is the user's session id should be sent to the BackChannelLogoutUri. Defaults to <c>true</c>.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowOfflineAccess">
+            <summary>
+            Gets or sets a value indicating whether [allow offline access]. Defaults to <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowedScopes">
+            <summary>
+            Specifies the api scopes that the client is allowed to request. If empty, the client can't access any scope
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AlwaysIncludeUserClaimsInIdToken">
+            <summary>
+            When requesting both an id token and access token, should the user claims always be added to the id token instead of requring the client to use the userinfo endpoint.
+            Defaults to <c>false</c>.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.IdentityTokenLifetime">
+            <summary>
+            Lifetime of identity token in seconds (defaults to 300 seconds / 5 minutes)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AccessTokenLifetime">
+            <summary>
+            Lifetime of access token in seconds (defaults to 3600 seconds / 1 hour)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AuthorizationCodeLifetime">
+            <summary>
+            Lifetime of authorization code in seconds (defaults to 300 seconds / 5 minutes)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AbsoluteRefreshTokenLifetime">
+            <summary>
+            Maximum lifetime of a refresh token in seconds. Defaults to 2592000 seconds / 30 days
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.SlidingRefreshTokenLifetime">
+            <summary>
+            Sliding lifetime of a refresh token in seconds. Defaults to 1296000 seconds / 15 days
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ConsentLifetime">
+            <summary>
+            Lifetime of a user consent in seconds. Defaults to null (no expiration)
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.RefreshTokenUsage">
+            <summary>
+            ReUse: the refresh token handle will stay the same when refreshing tokens
+            OneTime: the refresh token handle will be updated when refreshing tokens
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.UpdateAccessTokenClaimsOnRefresh">
+            <summary>
+            Gets or sets a value indicating whether the access token (and its claims) should be updated on a refresh token request.
+            Defaults to <c>false</c>.
+            </summary>
+            <value>
+            <c>true</c> if the token should be updated; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.RefreshTokenExpiration">
+            <summary>
+            Absolute: the refresh token will expire on a fixed point in time (specified by the AbsoluteRefreshTokenLifetime)
+            Sliding: when refreshing the token, the lifetime of the refresh token will be renewed (by the amount specified in SlidingRefreshTokenLifetime). The lifetime will not exceed AbsoluteRefreshTokenLifetime.
+            </summary>        
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AccessTokenType">
+            <summary>
+            Specifies whether the access token is a reference token or a self contained JWT token (defaults to Jwt).
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.EnableLocalLogin">
+            <summary>
+            Gets or sets a value indicating whether the local login is allowed for this client. Defaults to <c>true</c>.
+            </summary>
+            <value>
+              <c>true</c> if local logins are enabled; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.IdentityProviderRestrictions">
+            <summary>
+            Specifies which external IdPs can be used with this client (if list is empty all IdPs are allowed). Defaults to empty.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.IncludeJwtId">
+            <summary>
+            Gets or sets a value indicating whether JWT access tokens should include an identifier. Defaults to <c>false</c>.
+            </summary>
+            <value>
+            <c>true</c> to add an id; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.Claims">
+            <summary>
+            Allows settings claims for the client (will be included in the access token).
+            </summary>
+            <value>
+            The claims.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AlwaysSendClientClaims">
+            <summary>
+            Gets or sets a value indicating whether client claims should be always included in the access tokens - or only for client credentials flow.
+            Defaults to <c>false</c>
+            </summary>
+            <value>
+            <c>true</c> if claims should always be sent; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.ClientClaimsPrefix">
+            <summary>
+            Gets or sets a value to prefix it on client claim types. Defaults to <c>client_</c>.
+            </summary>
+            <value>
+            Any non empty string if claims should be prefixed with the value; otherwise, <c>null</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.PairWiseSubjectSalt">
+            <summary>
+            Gets or sets a salt value used in pair-wise subjectId generation for users of this client.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.UserSsoLifetime">
+            <summary>
+            The maximum duration (in seconds) since the last time the user authenticated.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.UserCodeType">
+            <summary>
+            Gets or sets the type of the device flow user code.
+            </summary>
+            <value>
+            The type of the device flow user code.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.DeviceCodeLifetime">
+            <summary>
+            Gets or sets the device code lifetime.
+            </summary>
+            <value>
+            The device code lifetime.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.AllowedCorsOrigins">
+            <summary>
+            Gets or sets the allowed CORS origins for JavaScript clients.
+            </summary>
+            <value>
+            The allowed CORS origins.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Client.Properties">
+            <summary>
+            Gets or sets the custom properties for the client.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="M:IdentityServer4.Models.Client.ValidateGrantTypes(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Validates the grant types.
+            </summary>
+            <param name="grantTypes">The grant types.</param>
+            <exception cref="T:System.InvalidOperationException">
+            Grant types list is empty
+            or
+            Grant types cannot contain spaces
+            or
+            Grant types list contains duplicate values
+            </exception>
+        </member>
+        <member name="T:IdentityServer4.Models.Consent">
+            <summary>
+            Represents the permissions (in terms of scopes) granted to a client by a subject
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Consent.SubjectId">
+            <summary>
+            Gets or sets the subject identifier.
+            </summary>
+            <value>
+            The subject identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Consent.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Consent.Scopes">
+            <summary>
+            Gets or sets the scopes.
+            </summary>
+            <value>
+            The scopes.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Consent.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Consent.Expiration">
+            <summary>
+            Gets or sets the expiration.
+            </summary>
+            <value>
+            The expiration.
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Models.DeviceCode">
+            <summary>
+            Represents data needed for device flow.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.Lifetime">
+            <summary>
+            Gets or sets the lifetime.
+            </summary>
+            <value>
+            The lifetime.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.ClientId">
+            <summary>
+            Gets or sets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.IsOpenId">
+            <summary>
+            Gets or sets a value indicating whether this instance is open identifier.
+            </summary>
+            <value>
+              <c>true</c> if this instance is open identifier; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.IsAuthorized">
+            <summary>
+            Gets or sets a value indicating whether this instance is authorized.
+            </summary>
+            <value>
+              <c>true</c> if this instance is authorized; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.RequestedScopes">
+            <summary>
+            Gets or sets the requested scopes.
+            </summary>
+            <value>
+            The authorized scopes.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.AuthorizedScopes">
+            <summary>
+            Gets or sets the authorized scopes.
+            </summary>
+            <value>
+            The authorized scopes.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.DeviceCode.Subject">
+            <summary>
+            Gets or sets the subject.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Models.SubjectTypes">
+            <summary>
+            OpenID Connect subject types.
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.SubjectTypes.Global">
+            <summary>
+            global - use the native subject id
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.SubjectTypes.Ppid">
+            <summary>
+            ppid - scope the subject id to the client
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.AccessTokenType">
+            <summary>
+            Access token types.
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.AccessTokenType.Jwt">
+            <summary>
+            Self-contained Json Web Token
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.AccessTokenType.Reference">
+            <summary>
+            Reference token
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.TokenUsage">
+            <summary>
+            Token usage types.
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.TokenUsage.ReUse">
+            <summary>
+            Re-use the refresh token handle
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.TokenUsage.OneTimeOnly">
+            <summary>
+            Issue a new refresh token handle every time
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.TokenExpiration">
+            <summary>
+            Token expiration types.
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.TokenExpiration.Sliding">
+            <summary>
+            Sliding token expiration
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.TokenExpiration.Absolute">
+            <summary>
+            Absolute token expiration
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.CspLevel">
+            <summary>
+            Content Security Policy Level
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.CspLevel.One">
+            <summary>
+            Level 1
+            </summary>
+        </member>
+        <member name="F:IdentityServer4.Models.CspLevel.Two">
+            <summary>
+            Level 2
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.IdentityResource">
+            <summary>
+            Models a user identity resource.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.IdentityResource.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.IdentityResource"/> class.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.IdentityResource.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.IdentityResource"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="claimTypes">The claim types.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.IdentityResource.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.IdentityResource"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="claimTypes">The claim types.</param>
+            <exception cref="T:System.ArgumentNullException">name</exception>
+            <exception cref="T:System.ArgumentException">Must provide at least one claim type - claimTypes</exception>
+        </member>
+        <member name="P:IdentityServer4.Models.IdentityResource.Required">
+            <summary>
+            Specifies whether the user can de-select the scope on the consent screen (if the consent screen wants to implement such a feature). Defaults to false.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.IdentityResource.Emphasize">
+            <summary>
+            Specifies whether the consent screen will emphasize this scope (if the consent screen wants to implement such a feature). 
+            Use this setting for sensitive or important scopes. Defaults to false.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.IdentityResource.ShowInDiscoveryDocument">
+            <summary>
+            Specifies whether this scope is shown in the discovery document. Defaults to true.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.PersistedGrant">
+            <summary>
+            A model for a persisted grant
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+            <value>
+            The key.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.Type">
+            <summary>
+            Gets the type.
+            </summary>
+            <value>
+            The type.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.SubjectId">
+            <summary>
+            Gets the subject identifier.
+            </summary>
+            <value>
+            The subject identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.ClientId">
+            <summary>
+            Gets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.Expiration">
+            <summary>
+            Gets or sets the expiration.
+            </summary>
+            <value>
+            The expiration.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.PersistedGrant.Data">
+            <summary>
+            Gets or sets the data.
+            </summary>
+            <value>
+            The data.
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Models.RefreshToken">
+            <summary>
+            Models a refresh token.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.Lifetime">
+            <summary>
+            Gets or sets the life time.
+            </summary>
+            <value>
+            The life time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.AccessToken">
+            <summary>
+            Gets or sets the access token.
+            </summary>
+            <value>
+            The access token.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.Subject">
+            <summary>
+            Gets or sets the original subject that requiested the token.
+            </summary>
+            <value>
+            The subject.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.Version">
+            <summary>
+            Gets or sets the version number.
+            </summary>
+            <value>
+            The version.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.ClientId">
+            <summary>
+            Gets the client identifier.
+            </summary>
+            <value>
+            The client identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.SubjectId">
+            <summary>
+            Gets the subject identifier.
+            </summary>
+            <value>
+            The subject identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.RefreshToken.Scopes">
+            <summary>
+            Gets the scopes.
+            </summary>
+            <value>
+            The scopes.
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Models.Resource">
+            <summary>
+            Models the common data of API and identity resources.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resource.Enabled">
+            <summary>
+            Indicates if this resource is enabled. Defaults to true.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resource.Name">
+            <summary>
+            The unique name of the resource.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resource.DisplayName">
+            <summary>
+            Display name of the resource.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resource.Description">
+            <summary>
+            Description of the resource.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resource.UserClaims">
+            <summary>
+            List of accociated user claims that should be included when this resource is requested.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resource.Properties">
+            <summary>
+            Gets or sets the custom properties for the resource.
+            </summary>
+            <value>
+            The properties.
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Models.Resources">
+            <summary>
+            Models a collection of identity and API resources.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Resources.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Resources"/> class.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Resources.#ctor(IdentityServer4.Models.Resources)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Resources"/> class.
+            </summary>
+            <param name="other">The other.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.Resources.#ctor(System.Collections.Generic.IEnumerable{IdentityServer4.Models.IdentityResource},System.Collections.Generic.IEnumerable{IdentityServer4.Models.ApiResource})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Resources"/> class.
+            </summary>
+            <param name="identityResources">The identity resources.</param>
+            <param name="apiResources">The API resources.</param>
+        </member>
+        <member name="P:IdentityServer4.Models.Resources.OfflineAccess">
+            <summary>
+            Gets or sets a value indicating whether [offline access].
+            </summary>
+            <value>
+              <c>true</c> if [offline access]; otherwise, <c>false</c>.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Resources.IdentityResources">
+            <summary>
+            Gets or sets the identity resources.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Resources.ApiResources">
+            <summary>
+            Gets or sets the API resources.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.Scope">
+            <summary>
+            Models access to an API resource
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Scope.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Scope"/> class.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Scope.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Scope"/> class.
+            </summary>
+            <param name="name">The name.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.Scope.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Scope"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.Scope.#ctor(System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Scope"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="claimTypes">The user-claim types.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.Scope.#ctor(System.String,System.String,System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Scope"/> class.
+            </summary>
+            <param name="name">The name.</param>
+            <param name="displayName">The display name.</param>
+            <param name="claimTypes">The user-claim types.</param>
+            <exception cref="T:System.ArgumentNullException">name</exception>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.Name">
+            <summary>
+            Name of the scope. This is the value a client will use to request the scope.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.DisplayName">
+            <summary>
+            Display name. This value will be used e.g. on the consent screen.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.Description">
+            <summary>
+            Description. This value will be used e.g. on the consent screen.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.Required">
+            <summary>
+            Specifies whether the user can de-select the scope on the consent screen. Defaults to false.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.Emphasize">
+            <summary>
+            Specifies whether the consent screen will emphasize this scope. Use this setting for sensitive or important scopes. Defaults to false.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.ShowInDiscoveryDocument">
+            <summary>
+            Specifies whether this scope is shown in the discovery document. Defaults to true.
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Scope.UserClaims">
+            <summary>
+            List of user-claim types that should be included in the access token.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Models.Secret">
+            <summary>
+            Models a client secret with identifier and expiration
+            </summary>
+        </member>
+        <member name="P:IdentityServer4.Models.Secret.Description">
+            <summary>
+            Gets or sets the description.
+            </summary>
+            <value>
+            The description.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Secret.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+            <value>
+            The value.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Secret.Expiration">
+            <summary>
+            Gets or sets the expiration.
+            </summary>
+            <value>
+            The expiration.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Secret.Type">
+            <summary>
+            Gets or sets the type of the client secret.
+            </summary>
+            <value>
+            The type of the client secret.
+            </value>
+        </member>
+        <member name="M:IdentityServer4.Models.Secret.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Secret"/> class.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Secret.#ctor(System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Secret"/> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="expiration">The expiration.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.Secret.#ctor(System.String,System.String,System.Nullable{System.DateTime})">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Secret" /> class.
+            </summary>
+            <param name="value">The value.</param>
+            <param name="description">The description.</param>
+            <param name="expiration">The expiration.</param>
+        </member>
+        <member name="M:IdentityServer4.Models.Secret.GetHashCode">
+            <summary>
+            Returns a hash code for this instance.
+            </summary>
+            <returns>
+            A hash code for this instance, suitable for use in hashing algorithms and data structures like a hash table. 
+            </returns>
+        </member>
+        <member name="M:IdentityServer4.Models.Secret.Equals(System.Object)">
+            <summary>
+            Determines whether the specified <see cref="T:System.Object" />, is equal to this instance.
+            </summary>
+            <param name="obj">The <see cref="T:System.Object" /> to compare with this instance.</param>
+            <returns>
+              <c>true</c> if the specified <see cref="T:System.Object" /> is equal to this instance; otherwise, <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:IdentityServer4.Models.Token">
+            <summary>
+            Models a token.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Token.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Token"/> class.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Models.Token.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:IdentityServer4.Models.Token"/> class.
+            </summary>
+            <param name="tokenType">Type of the token.</param>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Audiences">
+            <summary>
+            Gets or sets the audiences.
+            </summary>
+            <value>
+            The audiences.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Issuer">
+            <summary>
+            Gets or sets the issuer.
+            </summary>
+            <value>
+            The issuer.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.CreationTime">
+            <summary>
+            Gets or sets the creation time.
+            </summary>
+            <value>
+            The creation time.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Lifetime">
+            <summary>
+            Gets or sets the lifetime.
+            </summary>
+            <value>
+            The lifetime.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+            <value>
+            The type.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.ClientId">
+            <summary>
+            Gets or sets the ID of the client.
+            </summary>
+            <value>
+            The ID of the client.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.AccessTokenType">
+            <summary>
+            Gets or sets the type of access token of the client
+            </summary>
+            <value>
+            The access token type specified by the client.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Claims">
+            <summary>
+            Gets or sets the claims.
+            </summary>
+            <value>
+            The claims.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Version">
+            <summary>
+            Gets or sets the version.
+            </summary>
+            <value>
+            The version.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.SubjectId">
+            <summary>
+            Gets the subject identifier.
+            </summary>
+            <value>
+            The subject identifier.
+            </value>
+        </member>
+        <member name="P:IdentityServer4.Models.Token.Scopes">
+            <summary>
+            Gets the scopes.
+            </summary>
+            <value>
+            The scopes.
+            </value>
+        </member>
+        <member name="T:IdentityServer4.Services.ICorsPolicyService">
+            <summary>
+            Service that determines if CORS is allowed.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Services.ICorsPolicyService.IsOriginAllowedAsync(System.String)">
+            <summary>
+            Determines whether origin is allowed.
+            </summary>
+            <param name="origin">The origin.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.IAuthorizationCodeStore">
+            <summary>
+            Interface for the authorization code store
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IAuthorizationCodeStore.StoreAuthorizationCodeAsync(IdentityServer4.Models.AuthorizationCode)">
+            <summary>
+            Stores the authorization code.
+            </summary>
+            <param name="code">The code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IAuthorizationCodeStore.GetAuthorizationCodeAsync(System.String)">
+            <summary>
+            Gets the authorization code.
+            </summary>
+            <param name="code">The code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IAuthorizationCodeStore.RemoveAuthorizationCodeAsync(System.String)">
+            <summary>
+            Removes the authorization code.
+            </summary>
+            <param name="code">The code.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.IClientStore">
+            <summary>
+            Retrieval of client configuration
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IClientStore.FindClientByIdAsync(System.String)">
+            <summary>
+            Finds a client by id
+            </summary>
+            <param name="clientId">The client id</param>
+            <returns>The client</returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.IDeviceFlowStore">
+            <summary>
+            Interface for the device flow store
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IDeviceFlowStore.StoreDeviceAuthorizationAsync(System.String,System.String,IdentityServer4.Models.DeviceCode)">
+            <summary>
+            Stores the device authorization request.
+            </summary>
+            <param name="deviceCode">The device code.</param>
+            <param name="userCode">The user code.</param>
+            <param name="data">The data.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IDeviceFlowStore.FindByUserCodeAsync(System.String)">
+            <summary>
+            Finds device authorization by user code.
+            </summary>
+            <param name="userCode">The user code.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IDeviceFlowStore.FindByDeviceCodeAsync(System.String)">
+            <summary>
+            Finds device authorization by device code.
+            </summary>
+            <param name="deviceCode">The device code.</param>
+        </member>
+        <member name="M:IdentityServer4.Stores.IDeviceFlowStore.UpdateByUserCodeAsync(System.String,IdentityServer4.Models.DeviceCode)">
+            <summary>
+            Updates device authorization, searching by user code.
+            </summary>
+            <param name="userCode">The user code.</param>
+            <param name="data">The data.</param>
+        </member>
+        <member name="M:IdentityServer4.Stores.IDeviceFlowStore.RemoveByDeviceCodeAsync(System.String)">
+            <summary>
+            Removes the device authorization, searching by device code.
+            </summary>
+            <param name="deviceCode">The device code.</param>
+        </member>
+        <member name="T:IdentityServer4.Stores.IPersistedGrantStore">
+            <summary>
+            Interface for persisting any type of grant.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IPersistedGrantStore.StoreAsync(IdentityServer4.Models.PersistedGrant)">
+            <summary>
+            Stores the grant.
+            </summary>
+            <param name="grant">The grant.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IPersistedGrantStore.GetAsync(System.String)">
+            <summary>
+            Gets the grant.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IPersistedGrantStore.GetAllAsync(System.String)">
+            <summary>
+            Gets all grants for a given subject id.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IPersistedGrantStore.RemoveAsync(System.String)">
+            <summary>
+            Removes the grant by key.
+            </summary>
+            <param name="key">The key.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IPersistedGrantStore.RemoveAllAsync(System.String,System.String)">
+            <summary>
+            Removes all grants for a given subject id and client id combination.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <param name="clientId">The client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IPersistedGrantStore.RemoveAllAsync(System.String,System.String,System.String)">
+            <summary>
+            Removes all grants of a give type for a given subject id and client id combination.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <param name="clientId">The client identifier.</param>
+            <param name="type">The type.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.IReferenceTokenStore">
+            <summary>
+            Interface for reference token storage
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IReferenceTokenStore.StoreReferenceTokenAsync(IdentityServer4.Models.Token)">
+            <summary>
+            Stores the reference token.
+            </summary>
+            <param name="token">The token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IReferenceTokenStore.GetReferenceTokenAsync(System.String)">
+            <summary>
+            Gets the reference token.
+            </summary>
+            <param name="handle">The handle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IReferenceTokenStore.RemoveReferenceTokenAsync(System.String)">
+            <summary>
+            Removes the reference token.
+            </summary>
+            <param name="handle">The handle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IReferenceTokenStore.RemoveReferenceTokensAsync(System.String,System.String)">
+            <summary>
+            Removes the reference tokens.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <param name="clientId">The client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.IRefreshTokenStore">
+            <summary>
+            Interface for refresh token storage
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IRefreshTokenStore.StoreRefreshTokenAsync(IdentityServer4.Models.RefreshToken)">
+            <summary>
+            Stores the refresh token.
+            </summary>
+            <param name="refreshToken">The refresh token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IRefreshTokenStore.UpdateRefreshTokenAsync(System.String,IdentityServer4.Models.RefreshToken)">
+            <summary>
+            Updates the refresh token.
+            </summary>
+            <param name="handle">The handle.</param>
+            <param name="refreshToken">The refresh token.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IRefreshTokenStore.GetRefreshTokenAsync(System.String)">
+            <summary>
+            Gets the refresh token.
+            </summary>
+            <param name="refreshTokenHandle">The refresh token handle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IRefreshTokenStore.RemoveRefreshTokenAsync(System.String)">
+            <summary>
+            Removes the refresh token.
+            </summary>
+            <param name="refreshTokenHandle">The refresh token handle.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IRefreshTokenStore.RemoveRefreshTokensAsync(System.String,System.String)">
+            <summary>
+            Removes the refresh tokens.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <param name="clientId">The client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.IResourceStore">
+            <summary>
+            Resource retrieval
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IResourceStore.FindIdentityResourcesByScopeAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets identity resources by scope name.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IResourceStore.FindApiResourcesByScopeAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Gets API resources by scope name.
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IResourceStore.FindApiResourceAsync(System.String)">
+            <summary>
+            Finds the API resource by name.
+            </summary>
+            <param name="name">The name.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IResourceStore.GetAllResourcesAsync">
+            <summary>
+            Gets all resources.
+            </summary>
+        </member>
+        <member name="T:IdentityServer4.Stores.IUserConsentStore">
+            <summary>
+            Interface for user consent storage
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.IUserConsentStore.StoreUserConsentAsync(IdentityServer4.Models.Consent)">
+            <summary>
+            Stores the user consent.
+            </summary>
+            <param name="consent">The consent.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IUserConsentStore.GetUserConsentAsync(System.String,System.String)">
+            <summary>
+            Gets the user consent.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <param name="clientId">The client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.IUserConsentStore.RemoveUserConsentAsync(System.String,System.String)">
+            <summary>
+            Removes the user consent.
+            </summary>
+            <param name="subjectId">The subject identifier.</param>
+            <param name="clientId">The client identifier.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.Serialization.IPersistentGrantSerializer">
+            <summary>
+            Interface for persisted grant serialization
+            </summary>
+        </member>
+        <member name="M:IdentityServer4.Stores.Serialization.IPersistentGrantSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the specified value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.Serialization.IPersistentGrantSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified string.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json">The json.</param>
+            <returns></returns>
+        </member>
+        <member name="T:IdentityServer4.Stores.Serialization.PersistentGrantSerializer">
+            <summary>
+            JSON-based persisted grant serializer
+            </summary>
+            <seealso cref="T:IdentityServer4.Stores.Serialization.IPersistentGrantSerializer" />
+        </member>
+        <member name="M:IdentityServer4.Stores.Serialization.PersistentGrantSerializer.Serialize``1(``0)">
+            <summary>
+            Serializes the specified value.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="value">The value.</param>
+            <returns></returns>
+        </member>
+        <member name="M:IdentityServer4.Stores.Serialization.PersistentGrantSerializer.Deserialize``1(System.String)">
+            <summary>
+            Deserializes the specified string.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json">The json.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
